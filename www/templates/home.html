@@ -1,9 +1,5 @@
-<div class="list">
-    <a ng-repeat="item in items"
-
-    class="item item-thumbnail-left">
-    <img ng-src="{{item.gallery.src}}">
-    <h2>Test</h2>
-    <h4>{{item.gallery.src}}</h4>
-    </a>
-</div>
+<ion-slide-box >
+    <ion-slide ng-repeat="item in items" on-slide-changed="slideHasChanged($index)" on-swipe-down="onSwipeDown($index)" >
+        <div class="gallery-thumbnail" style="background-image: url({{item.link.src}});"></div>
+    </ion-slide>
+</ion-slide-box>
